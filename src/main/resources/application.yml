@@ -1,0 +1,77 @@
+#server:
+#  port: 19090
+#
+#spring:
+#  #springboot-es
+#  elasticsearch:
+#    #es配置
+#    rest:
+#      #最新配置方式使用restful风格，端口从9300 -> 9200
+#      #uris: 192.168.10.21:9200,192.168.10.22:9200,192.168.10.23:9200
+#      uris: 192.168.1.182:9200
+#      username: elastic
+#      password: kareza
+#    data:
+#      elasticsearch:
+#        repositories:
+#          enabled: true
+#  ##mysql
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.1.126:3306/sjcz_fuchain?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8&serverTimezone=GMT&serverTimezone=GMT%2B8
+#    username: root
+#    password: root
+#  jpa:
+#    show-sql: true # 默认false，在日志里显示执行的sql语句
+#    database: mysql
+#    #hibernate.ddl-auto: update #指定为update，每次启动项目检测表结构有变化的时候会新增字段，表不存在时会新建，如果指定create，则每次启动项目都会清空数据并删除表，再新建
+#    hibernate:
+#      naming:
+#        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl #指定jpa的自动表生成策略，驼峰自动映射为下划线格式
+##showSql
+#logging:
+#  config:
+#    classpath: logback-spring.xml
+#
+#es:
+##  hosts: 192.168.10.21:9200,192.168.10.22:9200,192.168.10.23:9200
+#  hosts: 192.168.1.182:9200
+#  username: elastic
+#  password: kareza
+#
+#
+#fabric:
+#  #----init
+#  cc: dev
+#  orgMSPID: DevMSP
+#  openTLS: true
+#  #user
+#  userleagueName: flt
+#  userorgName: dev
+#  userpeerName: peer0
+#  username: Admin
+#  userskPath: /opt/onekey-123/outdir/Admin@peer0.dev.flt.cn/Admin@dev.flt.cn/msp/keystore/14c3bb0094ef0216a764afe06078684f8c8ddee2012e57f875c84437e7b156d2_sk
+#  usercertificatePath: /opt/onekey-123/outdir/Admin@peer0.dev.flt.cn/Admin@dev.flt.cn/msp/signcerts/Admin@dev.flt.cn-cert.pem
+#  #orderer
+#  orderername: orderer
+#  ordererlocation: orderer.flt.cn:7050
+#  ordererserverCrtPath: /opt/onekey-123/outdir/orderer.flt.cn/tls/ca.crt
+#  ordererclientCertPath: /opt/onekey-123/outdir/orderer.flt.cn/tls/server.crt
+#  ordererclientKeyPath: /opt/onekey-123/outdir/orderer.flt.cn/tls/server.key
+#  #peer
+#  peerName: peer0
+#  peerLocation: peer0.dev.flt.cn:7051
+#  peerEventHubLocation: peer0.dev.flt.cn:7051
+#  peerserverCrtPath: /opt/onekey-123/outdir/peer0.dev.flt.cn/tls/ca.crt
+#  peerclientCertPath: /opt/onekey-123/outdir/peer0.dev.flt.cn/tls/server.crt
+#  peerclientKeyPath: /opt/onekey-123/outdir/peer0.dev.flt.cn/tls/server.key
+#  #channel
+#  channelName: mych
+#
+#  #---chaincode
+#  chaincodeName: httchaincode
+#  chaincodePath: fu-chain.com/fuchain-cccore-v141/examples/chaincode/go/httchaincode/cmd
+#  GOPATH: /root/gopath
+#  chaincodePolicy: /usr/1.yaml
+#  chaincodeVersion: 1.0
+#  proposalWaitTime: 90000
